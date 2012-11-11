@@ -227,8 +227,8 @@ public class Utils {
 		if (result == null) {
 			throw new MCNetworkException();
 		}
-		if (!result.contains(":")) {
-			if (result.trim().contains("Bad login")) {
+		if (!result.contains(":")) { return new String[] { "13", "deprecated", user, "0"} }; // Ariath's patch (Allows connect with non existing or premium accounts)
+			/*if (result.trim().contains("Bad login")) {
 				throw new BadLoginException();
 			} else if (result.trim().contains("User not premium")) {
 				throw new MinecraftUserNotPremiumException();
@@ -240,7 +240,7 @@ public class Utils {
 				System.err.print("Unknown login result: " + result);
 			}
 			throw new MCNetworkException();
-		}
+		}*/
 		return result.split(":");
 	}
 
