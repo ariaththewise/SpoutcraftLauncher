@@ -84,9 +84,9 @@ public class Utils {
 	}
 
 	public static File getWorkingDirectory(String applicationName) {
-		if (getStartupParameters() != null && getStartupParameters().isPortable()) {
+		//if (getStartupParameters() != null && getStartupParameters().isPortable()) {
 			return new File("spoutcraft");
-		}
+		//} - Ariath's patch (Keep Spoutcraft portable forever)
 
 		String userHome = System.getProperty("user.home", ".");
 		File workingDirectory;

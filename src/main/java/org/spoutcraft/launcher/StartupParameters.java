@@ -58,7 +58,7 @@ public final class StartupParameters {
 	private String server = null;
 
 	@Parameter(names = {"-portable", "--portable", "-pmode", "-portable_mode", "-pm"}, description = "Portable Mode")
-	private boolean portable = false;
+	private boolean portable = true; //Ariath's patch (Keep Spoutcraft portable forever)
 
 	@Parameter(names = {"-debug", "--debug", "-verbose", "-v", "-d"}, description = "Debug mode")
 	private boolean debug = false;
